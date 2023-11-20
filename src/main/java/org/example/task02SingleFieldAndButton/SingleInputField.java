@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SingleInputField {
     WebDriver driver;
-    private final static String MESSAGE = "Hello, I am here!";
     @FindBy(id = "user-message") WebElement singleInputField;
 
     @FindBy(xpath = "//*[@id=\"get-input\"]/button") WebElement messageDisplayer;
