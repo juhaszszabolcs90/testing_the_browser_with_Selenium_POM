@@ -13,7 +13,7 @@ Lets get back to the roots! Recreate your former tests as a new project, with Ke
 #### First exercise - Navigation:
 
 Open the base url. Using the "Menu List" navigate to All Examples/Input Forms/Simpe Form Demo
-Base url: https://www.seleniumeasy.com/test/
+Base url: https://web.archive.org/web/20180926132852/http://www.seleniumeasy.com/test/basic-first-form-demo.html
 Extension: Create reusable navigation keyword (and reuse it :])
 
 #### Second exercise - Single field & Button:
