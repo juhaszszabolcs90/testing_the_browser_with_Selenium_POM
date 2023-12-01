@@ -1,7 +1,6 @@
 package org.example.task01Navigation;
 
 import org.example.WebdriverSetup;
-import org.example.task04Checkbox.CheckBoxPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,16 +11,9 @@ public class Navigation {
     public final String URL = "https://web.archive.org/web/20180926132852/http://www.seleniumeasy.com/test/basic-first-form-demo.html";
     @FindBy(xpath = "//*[@id=\"treemenu\"]/li/ul/li[1]/a")
     WebElement inputForm;
-    //*[text()[contains(.,'Simple Form Demo')]]
-    //a[text()='Simple Form Demo']
-    //a[contains(.,'Simple Form Demo')]
-    //*[@id="treemenu"]/li/ul/li[1]/ul/li[1]/a
     @FindBy(xpath = "//*[@id=\"treemenu\"]/li/ul/li[1]/ul/li[1]/a")
     WebElement simpleFormDemo;
 
-    //    <a href="./basic-checkbox-demo.html">Checkbox Demo</a>
-    //*[contains(text(),'Checkbox Demo')]
-//*[@id="treemenu"]/li/ul/li[1]/ul/li[2]/a
     @FindBy(xpath = "//*[@id=\"treemenu\"]/li/ul/li[1]/ul/li[2]/a")
     WebElement checkBoxLink;
 
@@ -36,8 +28,6 @@ public class Navigation {
     }
 
     public void clickSimpleForm() {
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-//        wait.until(ExpectedConditions.elementToBeClickable(simpleFormDemo)).click();
         simpleFormDemo.click();
     }
 
