@@ -6,10 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class Navigation {
     WebDriver driver;
@@ -22,6 +18,12 @@ public class Navigation {
     //*[@id="treemenu"]/li/ul/li[1]/ul/li[1]/a
     @FindBy(xpath = "//*[@id=\"treemenu\"]/li/ul/li[1]/ul/li[1]/a")
     WebElement simpleFormDemo;
+
+    //    <a href="./basic-checkbox-demo.html">Checkbox Demo</a>
+    //*[contains(text(),'Checkbox Demo')]
+//*[@id="treemenu"]/li/ul/li[1]/ul/li[2]/a
+    @FindBy(xpath = "//*[@id=\"treemenu\"]/li/ul/li[1]/ul/li[2]/a")
+    WebElement checkBoxLink;
 
     public Navigation() {
         this.driver = WebdriverSetup.getDriver();
@@ -44,9 +46,12 @@ public class Navigation {
         clickSimpleForm();
     }
 
-    public void navigateToCheckBoxDemo(WebDriver driver) {
+    public void navigateToCheckBoxDemo() {
         clickInputForm();
-        CheckBoxPage checkBoxPage = new CheckBoxPage(driver);
-        checkBoxPage.clickCheckBoxLink();
+        clickCheckBoxLink();
+    }
+
+    public void clickCheckBoxLink() {
+        checkBoxLink.click();
     }
 }
