@@ -1,5 +1,6 @@
 package org.example.task03TwoFieldsAndOutput;
 
+import org.example.WebdriverSetup;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class TwoInputFields {
     WebDriver driver;
+    public final String URL = "https://web.archive.org/web/20180926132852/http://www.seleniumeasy.com/test/basic-first-form-demo.html";
     @FindBy(id = "sum1") WebElement firstValueBox;
     @FindBy(id = "sum2") WebElement secondValueBox;
     @FindBy(xpath = "//*[@id=\"gettotal\"]/button") WebElement submitButton;
@@ -16,8 +18,9 @@ public class TwoInputFields {
         firstValueBox.sendKeys(value1);
     }
 
-    public TwoInputFields(WebDriver driver) {
-        this.driver = driver;
+    public TwoInputFields() {
+        this.driver = WebdriverSetup.getDriver();
+        driver.get(URL);
         PageFactory.initElements(driver, this);
     }
 

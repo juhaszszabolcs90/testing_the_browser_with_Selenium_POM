@@ -1,16 +1,16 @@
 import org.example.WebdriverSetup;
 import org.example.task01Navigation.Navigation;
-import org.testng.annotations.AfterClass;
+import org.junit.jupiter.api.AfterEach;
 import org.testng.annotations.Test;
 
-public class TestNavigation {
+public class TestCheckBox4 {
     @Test
-    public void runNavigationTest() {
+    public void runCheckBoxTest() {
         Navigation navigation = new Navigation();
-        navigation.navigateToSimpleFormDemo();
+        navigation.navigateToCheckBoxDemo();
     }
 
-    @AfterClass
+    @AfterEach
     public void tearDown() {
         WebdriverSetup.quitDriver();
     }
